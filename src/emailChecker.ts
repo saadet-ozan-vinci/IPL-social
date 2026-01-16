@@ -18,7 +18,7 @@ class EmailChecker{
     }
 
     checkSpace(input:string):boolean{
-        if("with space"=== input){
+        if(input.includes(" ")){
             return false;
         }
         return true;
