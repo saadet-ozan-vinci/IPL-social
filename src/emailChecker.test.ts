@@ -37,7 +37,7 @@ describe("EmailChecker", () => {
         })
         it("should return true when given point.in@domain.name", ()=>{
             let result = emailChecker.checkPointSignInDomain("point.in@domain.name");
-            expect(result).toBe(false);})
+            expect(result).toBe(true);})
         
     })
 });
