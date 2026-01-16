@@ -1,39 +1,9 @@
-Based on the sources and your provided snippet, the logic of your file is **excellent** and fully compliant with the exam rules, **BUT** you have a **syntax error** at the very end that will cause the pipeline to fail immediately.
-
-You have pasted the `on:` configuration **twice** (once at the top, and again at the very bottom).
-
-Here is the correction and why the rest of the file is "good" for the exam:
-
-### 1. The Syntax Error (Critical Fix)
-In YAML files, you cannot have duplicate keys or content hanging at the bottom. You must **delete** the last 5 lines of your snippet.
-
-**Delete this part from the end of your file:**
-```yaml
-    on:       <-- DELETE THIS
-  push:       <-- DELETE THIS
-    branches: [ "main" ] <-- DELETE THIS
-  pull_request: <-- DELETE THIS
-    branches: [ "main" ] <-- DELETE THIS
-```
-*Reason:* You already defined these triggers correctly at the top of the file.
-
-### 2. Why the rest is "Good" for the Exam
-Once you delete those lines, the remaining file is perfect for the "IPL Social" exam for three reasons supported by the sources:
-
-*   **No Deployment:** The exam explicitly states "You must not deploy to a server". Your pipeline ends at `npm test` and does not contain any "publish" or "deploy" steps, which matches exactly what the instructor demonstrated when removing deployment steps for the class exercise.
-*   **Correct Triggers:** You included `pull_request`, which is essential. The instructor explained that the pipeline is defined by these events and demonstrated triggering it via a Pull Request to validate code before merging,.
-*   **Correct Commands:** You are using `npm ci` (Clean Install) and `npm test`. This ensures your TDD tests (Question 2 of the exam) are actually executed by GitHub,.
-
-### 3. Your Final Corrected File
-Copy and paste exactly this into `.github/workflows/node.js.yml`:
-
-```yaml
 name: Node.js CI
 
 on:
   push:
     branches: [ "main" ]
-  pull_request:
+  pull_request:             
     branches: [ "main" ]
 
 jobs:
@@ -55,4 +25,3 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-```
