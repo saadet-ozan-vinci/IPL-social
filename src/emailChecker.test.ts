@@ -18,4 +18,11 @@ describe("EmailChecker", () => {
             expect(result).toBe(true);
         })
     });
+
+    describe("checkPointSignInDomain()", ()=>{
+        it("should return false when given nopointsign@domain", ()=>{
+            let result = emailChecker.checkPointSignInDomain("nopointsign@domain");
+            expect(result).toBe(false);
+        })
+    })
 });

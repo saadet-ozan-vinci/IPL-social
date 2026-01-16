@@ -5,6 +5,11 @@ class EmailChecker{
         return false;
     }
 
+    checkPointSignInDomain(input :string) : boolean{
+        return false;
+    }
+    
+
 }
 
 export default EmailChecker;
