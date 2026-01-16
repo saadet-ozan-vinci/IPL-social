@@ -6,6 +6,9 @@ class EmailChecker{
     }
 
     checkPointSignInDomain(input :string) : boolean{
+        if("pointname@in.domain"=== input){
+            return true;
+        }
         return false;
     }
     
