@@ -11,6 +11,8 @@ class EmailChecker{
         }
         return false;
     }
+
+    
     
 
 }
