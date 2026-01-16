@@ -16,6 +16,15 @@ class EmailChecker{
         }
         return false;
     }
+
+    checkSpace(input:string):boolean{
+        if(input.includes(" ")){
+            return false;
+        }
+        return true;
+    }
+
+    
     
 
 }
