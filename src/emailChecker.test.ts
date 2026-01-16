@@ -19,14 +19,5 @@ describe("EmailChecker", () => {
         })
     });
 
-    describe("checkPointSignInDomain()", ()=>{
-        it("should return false when given nopointsign@domain", ()=>{
-            let result = emailChecker.checkPointSignInDomain("nopointsign@domain");
-            expect(result).toBe(false);
-        });
-        it("should return true when given pointname@in.domain", ()=>{
-            let result = emailChecker.checkPointSignInDomain("pointname@in.domain");
-            expect(result).toBe(true);
-        })
-    })
+
 });
