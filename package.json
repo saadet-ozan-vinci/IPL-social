@@ -1,7 +1,7 @@
 {
   "name": "examen",
   "version": "1.0.0",
-  "description": "first name + LAST NAME: Saadet OZAN",
+  "description": "Saadet OZAN",
   "main": "index.js",
   "scripts": {
     "test": "jest"},
