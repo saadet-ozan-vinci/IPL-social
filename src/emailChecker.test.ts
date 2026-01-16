@@ -13,5 +13,9 @@ describe("EmailChecker", () => {
             let result =emailChecker.checkAtSign("stringwith@");
             expect(result).toBe(true);
         })
+        it("should return true when given anotherstringwith@", ()=>{
+            let result = emailChecker.checkAtSign("anotherstringwith@");
+            expect(result).toBe(true);
+        })
     });
 });

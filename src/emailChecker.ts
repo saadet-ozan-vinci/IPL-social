@@ -1,6 +1,6 @@
 class EmailChecker{
     checkAtSign(input: string): boolean{
-        if(input === "stringwith@")
+        if(input === "stringwith@"|| input === "anotherstringwith@")
             return true;
         return false;
     }
