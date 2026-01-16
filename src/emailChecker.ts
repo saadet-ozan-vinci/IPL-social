@@ -17,6 +17,10 @@ class EmailChecker{
         return false;
     }
 
+    checkSpace(input:string):boolean{
+        return true;
+    }
+
     
     
 

@@ -40,4 +40,10 @@ describe("EmailChecker", () => {
             expect(result).toBe(true);})
         
     })
+    describe("checkSpace()", ()=>{
+        it("should return true when given nospaces", ()=>{
+            let result = emailChecker.checkSpace("nospaces");
+            expect(result).toBe(true);
+        })
+    })
 });
