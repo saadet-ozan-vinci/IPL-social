@@ -6,7 +6,12 @@ class EmailChecker{
     }
 
     checkPointSignInDomain(input :string) : boolean{
-        if("pointname@in.domain"=== input|| "oint.in@domain.name"=== input){
+        let domainName : string= input.split("@")[1];
+        console.log(domainName);
+        if(domainName[domainName.length-1] ==="."){
+            return false;
+        }
+        if(domainName.includes(".")){
             return true;
         }
         return false;
