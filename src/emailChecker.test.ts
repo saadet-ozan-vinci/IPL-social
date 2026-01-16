@@ -28,8 +28,13 @@ describe("EmailChecker", () => {
             expect(result).toBe(true);
         })
         it("should return false when given pointname@indomainlast.", ()=>{
-            let result = emailChecker.checkPointSignInDomain("pointname@indomain.last");
+            let result = emailChecker.checkPointSignInDomain("pointname@indomainlast.");
             expect(result).toBe(false);
         })
+        it("should return false when given point.not@indomain", ()=>{
+                        let result = emailChecker.checkPointSignInDomain("point.not@indomain");
+            expect(result).toBe(false);
+        })
+        
     })
 });
