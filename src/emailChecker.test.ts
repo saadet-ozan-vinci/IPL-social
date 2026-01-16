@@ -4,7 +4,6 @@ describe("EmailChecker", () => {
     let emailChecker = new EmailChecker();
     
     describe("checkAtSign()", () => {
-        // ADDED: () => { ... } wrapper around the logic
         it("should return false when given string without @", () => {
             let result = emailChecker.checkAtSign("noatsign");
             expect(result).toBe(false);
@@ -27,6 +26,10 @@ describe("EmailChecker", () => {
         it("should return true when given pointname@in.domain", ()=>{
             let result = emailChecker.checkPointSignInDomain("pointname@in.domain");
             expect(result).toBe(true);
+        })
+        it("should return false when given pointname@indomainlast.", ()=>{
+            let result = emailChecker.checkPointSignInDomain("pointname@indomain.last");
+            expect(result).toBe(false);
         })
     })
 });
