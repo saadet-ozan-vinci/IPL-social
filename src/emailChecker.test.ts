@@ -9,5 +9,9 @@ describe("EmailChecker", () => {
             let result = emailChecker.checkAtSign("noatsign");
             expect(result).toBe(false);
         }); 
+        it("should return true when given string = stringwith@", ()=>{
+            let result =emailChecker.checkAtSign("stringwith@");
+            expect(result).toBe(true);
+        })
     });
 });
