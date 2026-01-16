@@ -4,8 +4,7 @@
   "description": "Saadet OZAN",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
-  },
+    "test": "jest"},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/saadet-ozan-vinci/IPL-social.git"
